@@ -41,7 +41,7 @@
 			</div>
 			<div class="form-group">
 				<label for="password" class="label">Password</label> <input
-					type="password" class="form-control mb-4" id="password"
+					type="text" class="form-control mb-4" id="password"
 					placeholder="Password" name="password">
 
 			</div>

@@ -65,7 +65,7 @@ public class Dao implements IDao {
 	}
 	
 	public boolean checkUser(String email, String password) {
-		String sql = "select * from Users where email = '" + email + "' and password = '" + password + "';";
+		String sql = "select * from Users where email = '" + email + "' and password = '" + password;
 		Connection connection = getConnection();
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
@@ -97,6 +97,6 @@ public class Dao implements IDao {
 		Dao dao = new Dao();
 		List<User> results = new ArrayList<>();
 		results = dao.getAll();
-		System.out.println(dao.checkUser("admin@email.com", "1236"));
+		System.out.println(dao.checkUser("admin@email.com", "' or 1=1--"));
 	}
 }
